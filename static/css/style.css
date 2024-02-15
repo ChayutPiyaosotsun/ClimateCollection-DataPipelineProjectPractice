@@ -1,25 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-}
-
-h1 {
+header {
     text-align: center;
     padding: 20px;
+    margin-bottom: 20px; /* Spacing between the header and the buttons */
 }
 
-#graphs {
-    width: 80%;
-    margin: auto;
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 2em; /* Larger text for the heading */
+}
+
+header p {
+    margin: 0;
+    font-size: 1em; /* Regular text size for the paragraph */
+    color: #333; /* A darker text color for better readability */
+}
+
+#buttons-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#graphs-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* If you want to support wrapping for smaller screens */
+    margin-top: 20px;
 }
 
-#graphs img {
+#graphs-container img {
     max-width: 100%;
+    height: auto;
+    display: block; /* Change this to block to override the inline style 'none' */
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

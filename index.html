@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Data Visualization</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Climate Collection</title>
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <h1>Climate Data Visualization</h1>
-    <div id="graphs">
-        <!-- Dynamically load graph images here -->
-        <img src="graphs/Bangkok,TH-boxplot.png">
-        <!-- Repeat for other cities -->
+    <header>
+        <h1>Welcome to the Climate Data Visualization Project</h1>
+        <p>This project provides interactive visualizations of climate data for various cities. Use the buttons below to display graphs representing different climate metrics.</p>
+    </header>
+    <div id="buttons-container">
+        <!-- Buttons for each city -->
+        <button class="show-graphs" data-city="Bangkok,TH">Bangkok</button>
+        <button class="show-graphs" data-city="Phetchaburi,TH">Phetchaburi</button>
+        <button class="show-graphs" data-city="TAK,TH">TAK</button>
+        <button class="show-graphs" data-city="Surat Thani,TH">Surat Thani</button>
+        <button class="show-graphs" data-city="Ratchaburi,TH">Ratchaburi</button>
+        <button class="show-graphs" data-city="Phuket,TH">Phuket</button>
+        <button class="show-graphs" data-city="Nakhon Si Thammarat,TH">Nakhon Si Thammarat</button>
+        <button class="show-graphs" data-city="Chiang Rai,TH">Chiang Rai</button>
     </div>
+    <div id="graphs-container">
+        <!-- Initially set src to an empty string -->
+        <img id="monthly-trend" src="" alt="Monthly Trend" style="display:none;">
+        <img id="boxplot" src="" alt="Boxplot" style="display:none;">
+        <img id="histogram" src="" alt="Histogram" style="display:none;">
+        <img id="scatter-plot" src="" alt="Scatter Plot" style="display:none;">
+    </div>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
