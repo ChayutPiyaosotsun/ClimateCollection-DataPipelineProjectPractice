@@ -60,3 +60,20 @@ After running the analysis, the generated graphs can be viewed in the graphs dir
 Before running the project, you must provide your OpenWeatherMap API key. This can be done by setting an environment variable named `OPENWEATHERMAP_API_KEY`.
 
 Alternatively, you can use a `.env` file placed in the root of the project with the following content:
+
+## Web Interface
+
+This project includes an interactive web interface hosted on GitHub Pages.
+
+Accessing the Web Interface
+The web interface can be accessed directly through the following URL: https://chayutpiyaosotsun.github.io/ClimateCollection-DataPipelineProjectPractice/
+
+### Features of the Web Interface
+- Interactive Graph Viewing: Click on the buttons corresponding to each city to view the climate data visualizations for that location.
+- Graph Types: The interface displays multiple types of graphs such as boxplots, histograms, and scatter plots that represent different aspects of the climate data.
+Responsive Design: Designed to work across various devices and screen sizes, ensuring accessibility and ease of use.
+
+### How to Use
+- Visit the URL provided above.
+- Click on one of the city buttons to load the visualizations for that particular city.
+- Explore the different graphs that appear, which will include the monthly trends, distribution, and other statistical views of the climate data.
