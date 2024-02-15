@@ -4,6 +4,7 @@ import sys
 import os
 from database.models import RawWeatherData, Session
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 
 def fetch_historical_weather(api_key, start, end, city):
     url = f"https://history.openweathermap.org/data/2.5/history/city?q={city}&type=hour&start={start}&end={end}&appid={api_key}"
@@ -47,7 +48,8 @@ def store_raw_weather_data(city, raw_data):
     print(f"Data stored for {city} up until epoch {last_timestamp}")
 
 if __name__ == "__main__":
-    api_key = 'aad95daca120a483de7699fa4aaa8504'
+    load_dotenv()  # Load environment variables from .env file
+    api_key = os.environ.get('OPENWEATHERMAP_API_KEY')
     cities = ['Bangkok,TH', 'Phetchaburi,TH', 'TAK,TH', 'Surat Thani,TH', 'Ratchaburi,TH', 'Phuket,TH', 'Nakhon Si Thammarat,TH', 'Chiang Rai,TH']
     for city in cities:
         collect_data_for_2023(api_key, city)

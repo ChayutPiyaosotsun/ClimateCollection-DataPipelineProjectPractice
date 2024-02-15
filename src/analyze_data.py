@@ -24,7 +24,7 @@ def plot_monthly_temperature_trends(city_name):
     plt.title(f'Average Monthly Temperature for {city_name}')
     plt.xticks(avg_months, [datetime(2023, month, 1).strftime('%B') for month in avg_months], rotation=45)
     plt.tight_layout()
-    plt.savefig(f'graphs/{city_name}_monthly_trend.png')
+    plt.savefig(f'graphs/{city_name}-monthly-trend.png')
     plt.close()
 
     session = Session()
@@ -44,7 +44,7 @@ def plot_monthly_temperature_trends(city_name):
     plt.ylabel('Frequency')
     plt.title(f'Histogram - Temperature Distribution for {city_name}')
     plt.tight_layout()
-    plt.savefig(f'graphs/{city_name}_histogram.png')
+    plt.savefig(f'graphs/{city_name}-histogram.png')
     plt.close()
 
     # Boxplot for temperature spread
@@ -55,7 +55,7 @@ def plot_monthly_temperature_trends(city_name):
     plt.title(f'Boxplot - Temperature Spread for {city_name}')
     plt.xticks([1], [city_name])
     plt.tight_layout()
-    plt.savefig(f'graphs/{city_name}_boxplot.png')
+    plt.savefig(f'graphs/{city_name}-boxplot.png')
     plt.close()
     
     # Scatter plot for individual temperature points over time
@@ -66,7 +66,7 @@ def plot_monthly_temperature_trends(city_name):
     plt.title(f'Scatter Plot - Monthly Temperature for {city_name}')
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig(f'graphs/{city_name}_scatter_plot.png')
+    plt.savefig(f'graphs/{city_name}-scatter-plot.png')
     plt.close()
 
 if __name__ == "__main__":
